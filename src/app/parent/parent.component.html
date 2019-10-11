@@ -1,0 +1,37 @@
+<p>How to share data from Parent component to Child component?</p>
+<div>
+  <app-for-input [childMessage]="parentMessage"></app-for-input>
+</div>
+
+<h3>Below button will always disabled due to string interpolation use as in.</h3>
+<button disabled='{{!isDisabled}}'>Try Me</button>
+<p>This is another {{'interpolation'}}  {{getServerId()}} examples.</p>
+
+
+<hr>
+<button [disabled]='allowButton'>Button</button>
+<p [innerText]='serverStatus'></p>
+
+
+<hr>
+<div>
+  <app-for-style></app-for-style>
+</div>
+
+<div>
+  <app-for-class></app-for-class>
+</div>
+
+
+<div>
+<app-number>
+<p>This is because of ng-content,as a content projection in <strong>Number Component</strong>
+If ng-content will be removed from  <b>Number component</b> So it will be not displayed here.</p>
+</app-number>
+</div>
+<hr>
+<br>
+
+Output Example - {{Omessage}}
+
+<app-output (messageEvent)="receiveMessage($event)"></app-output>
